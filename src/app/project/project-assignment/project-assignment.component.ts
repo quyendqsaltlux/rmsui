@@ -7,7 +7,7 @@ import {BsModalRef, BsModalService, ModalOptions} from 'ngx-bootstrap';
 import {SpecificCommentComponent} from '../../evaluation/specific-comment/specific-comment.component';
 import {Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
-import {FLOAT_REGEX} from '../../AppConstant';
+import {FLOAT_REGEX, INTEGER_REGEX} from '../../AppConstant';
 import {PoService} from '../../service/po.service';
 import * as _ from 'lodash';
 import {PoFormComponent} from '../../po/po-form/po-form.component';
@@ -20,6 +20,7 @@ import {PoFormComponent} from '../../po/po-form/po-form.component';
 export class ProjectAssignmentComponent implements OnInit {
   @ViewChild('template') template: TemplateRef<any>;
   _FLOAT_REGEX = FLOAT_REGEX;
+  _INTEGER_REGEX = INTEGER_REGEX;
   @ViewChild('f') f: NgForm;
   @Input() index;
   @Input() viewControl;

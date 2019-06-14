@@ -25,63 +25,63 @@
                           <label for="reprep">Rep.</label>
                           <input class=" form-control form-control-sm" id="reprep" name="reprep"
                                  [(ngModel)]="model.reprep" #reprep="ngModel" maxlength="7" required
-                                 [pattern]="_FLOAT_REGEX"
+                                 [pattern]="_INTEGER_REGEX"
                                  (ngModelChange)="onRepInputChanged()"
                                  [ngClass]="{'is-invalid': reprep.invalid && (reprep.dirty || reprep.touched)}">
-                          <div *ngIf="reprep.invalid && (reprep.dirty || reprep.touched)" class="msg-invalid">Type a number</div>
+                          <div *ngIf="reprep.invalid && (reprep.dirty || reprep.touched)" class="msg-invalid">Type a integer</div>
                         </div>
                         <div class="form-group w80">
                           <label for="rep100">Rep 100 %</label>
                           <input class=" form-control form-control-sm" id="rep100" name="rep100"
                                  [(ngModel)]="model.rep100" #rep100="ngModel" maxlength="7"
-                                 [pattern]="_FLOAT_REGEX" required
+                                 [pattern]="_INTEGER_REGEX" required
                                  (ngModelChange)="onRepInputChanged()"
                                  [ngClass]="{'is-invalid': rep100.invalid && (rep100.dirty || rep100.touched)}">
-                          <div *ngIf="rep100.invalid && (rep100.dirty || rep100.touched)" class="msg-invalid">Type a number</div>
+                          <div *ngIf="rep100.invalid && (rep100.dirty || rep100.touched)" class="msg-invalid">Type a integer</div>
                         </div>
                         <div class="form-group w80">
                           <label for="rep99_95">Rep 99~95 %</label>
                           <input class=" form-control form-control-sm" id="rep99_95" name="rep99_95"
                                  [(ngModel)]="model.rep99_95" #rep99_95="ngModel" maxlength="7"
-                                 [pattern]="_FLOAT_REGEX" required
+                                 [pattern]="_INTEGER_REGEX" required
                                  (ngModelChange)="onRepInputChanged()"
                                  [ngClass]="{'is-invalid': rep99_95.invalid && (rep99_95.dirty || rep99_95.touched)}">
-                          <div *ngIf="rep99_95.invalid && (rep99_95.dirty || rep99_95.touched)" class="msg-invalid">Type a number</div>
+                          <div *ngIf="rep99_95.invalid && (rep99_95.dirty || rep99_95.touched)" class="msg-invalid">Type a integer</div>
                         </div>
                         <div class="form-group w80">
                           <label for="rep94_85">Rep 94~85 %</label>
                           <input class=" form-control form-control-sm" id="rep94_85" name="rep94_85"
                                  [(ngModel)]="model.rep94_85" #rep94_85="ngModel" maxlength="7"
-                                 [pattern]="_FLOAT_REGEX" required
+                                 [pattern]="_INTEGER_REGEX" required
                                  (ngModelChange)="onRepInputChanged()"
                                  [ngClass]="{'is-invalid': rep94_85.invalid && (rep94_85.dirty || rep94_85.touched)}">
-                          <div *ngIf="rep94_85.invalid && (rep94_85.dirty || rep94_85.touched)" class="msg-invalid">Type a number</div>
+                          <div *ngIf="rep94_85.invalid && (rep94_85.dirty || rep94_85.touched)" class="msg-invalid">Type a integer</div>
                         </div>
                         <div class="form-group w80">
                           <label for="rep84_75">Rep 84~75 %</label>
                           <input class=" form-control form-control-sm" id="rep84_75" name="rep84_75"
                                  [(ngModel)]="model.rep84_75" #rep84_75="ngModel"
-                                 [pattern]="_FLOAT_REGEX" required maxlength="7"
+                                 [pattern]="_INTEGER_REGEX" required maxlength="7"
                                  (ngModelChange)="onRepInputChanged()"
                                  [ngClass]="{'is-invalid': rep84_75.invalid && (rep84_75.dirty || rep84_75.touched)}">
-                          <div *ngIf="rep84_75.invalid && (rep84_75.dirty || rep84_75.touched)" class="msg-invalid">Type a number</div>
+                          <div *ngIf="rep84_75.invalid && (rep84_75.dirty || rep84_75.touched)" class="msg-invalid">Type a integer</div>
                         </div>
                         <div class="form-group w80">
                           <label for="repnoMatch">New/Hour</label>
                           <input class=" form-control form-control-sm" id="repnoMatch" name="repnoMatch"
                                  [(ngModel)]="model.repnoMatch" #repnoMatch="ngModel" min="0"
-                                 [pattern]="_FLOAT_REGEX" required maxlength="5"
+                                 [pattern]="_INTEGER_REGEX" required maxlength="5"
                                  (ngModelChange)="onRepInputChanged()"
                                  [ngClass]="{'is-invalid': repnoMatch.invalid && (repnoMatch.dirty || repnoMatch.touched)}">
-                          <div *ngIf="repnoMatch.invalid && (repnoMatch.dirty || repnoMatch.touched)" class="msg-invalid">Type a number</div>
+                          <div *ngIf="repnoMatch.invalid && (repnoMatch.dirty || repnoMatch.touched)" class="msg-invalid">Type a integer</div>
                         </div>
                         <div class="form-group w80">
                           <label for="totalRep">Total Rep</label>
                           <input readonly class="form-control form-control-sm" id="totalRep" name="totalRep"
-                                 [pattern]="_FLOAT_REGEX" required
+                                 [pattern]="_INTEGER_REGEX" required
                                  [(ngModel)]="model.totalRep" #totalRep="ngModel"
                                  [ngClass]="{'is-invalid': totalRep.invalid && (totalRep.dirty || totalRep.touched)}">
-                          <div *ngIf="totalRep.invalid && (totalRep.dirty || totalRep.touched)" class="msg-invalid">Type a number</div>
+                          <div *ngIf="totalRep.invalid && (totalRep.dirty || totalRep.touched)" class="msg-invalid">Type a integer</div>
                         </div>
 
                         <div class="form-group w80">

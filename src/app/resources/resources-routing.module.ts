@@ -24,7 +24,14 @@ const routes: Routes = [
       {path: 'edit/:id', component: CandidateFormComponent, data: {title: 'Edit'}},
       {path: ':candidateId/abilities', component: AbilitiesComponent, data: {title: 'Rates'}},
       {path: ':candidateId/project-history', component: ProjectHistoryComponent, data: {title: 'Project history'}},
-      {path: 'test-waiting/list', component: TestWaitingListComponent, data: {title: 'Unevaluated resource list'}},
+      {
+        path: 'test-waiting/list', component: TestWaitingListComponent,
+        data: {
+          title: 'Unevaluated resource list',
+          roles: ['ROLE_ADMIN', 'ROLE_RM']
+        },
+        canActivate: [AuthGuard, RoleGuard],
+      },
       {path: 'test-waiting/edit/:testWaitingId', component: TestWaitingFormComponent, data: {title: 'Unevaluated resource form'}},
     ]
   }
