@@ -2,12 +2,11 @@ import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {ToastrService} from 'ngx-toastr';
 import {BsModalRef, BsModalService, ModalOptions} from 'ngx-bootstrap';
 import {separateFiltersFromGrid} from '../../util/http-util';
-import {ActionsColRendererComponent} from '../../share/ag-grid/actions-col-renderer.component';
 import {Router} from '@angular/router';
 import {TestWaitingService} from '../../service/test-waiting.service';
 import {InternalCheckCellComponent} from '../../share/ag-grid/internal-check-cell/internal-check-cell.component';
 import {EQUAL} from '../../AppConstant';
-import {TrackingTestActionsCellComponent} from "../../share/ag-grid/tracking-test-actions-cell/tracking-test-actions-cell.component";
+import {TrackingTestActionsCellComponent} from '../../share/ag-grid/tracking-test-actions-cell/tracking-test-actions-cell.component';
 
 @Component({
   selector: 'app-test-waiting-list',
