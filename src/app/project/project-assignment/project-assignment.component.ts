@@ -259,7 +259,7 @@ export class ProjectAssignmentComponent implements OnInit {
 
   updateTotalMoney() {
     // this.model.total = Number(( this.model.netOrHour * this.model.unitPrice).toFixed(2));
-    this.model.total = Number( this.model.netOrHour * this.model.unitPrice);
+    this.model.total = Number(this.model.netOrHour * this.model.unitPrice);
   }
 
   onSelectTaskSourceTarget(ability) {
@@ -328,6 +328,9 @@ export class ProjectAssignmentComponent implements OnInit {
     this.model.totalRep = 0;
     this.model.unitPrice = 0;
     this.model.total = 0;
+    if (!this.model.notAutoComputeNetHour) {
+      this.model.netOrHour = 0;
+    }
   }
 
   private getUnitPrice(ability, netOrHour) {

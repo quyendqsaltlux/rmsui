@@ -91,6 +91,9 @@ export class ResourceSearchComponent implements OnInit {
   }
 
   onToggleExternalResource() {
+    this.asyncSelected = null;
+    this.model.candidate = null;
+    this.selectedOption = null;
     this.selectedAbility = null;
     this.model.useCustomTask = false;
     this.toggleExternalResource.emit(true);
