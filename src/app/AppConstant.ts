@@ -6,6 +6,7 @@ export const O = 'O';
 export const X = 'X';
 
 export const FLOAT_REGEX = /^[0-9]+([.][0-9]+)*$/;
+export const INTEGER_REGEX = /^[1-9]\d*$/;
 export const AVATAR_FOLDER = 'AVATAR';
 export const DIPLOMA_FOLDER = 'DIPLOMA';
 export const OTHER_ATTACHMENTS_FOLDER = 'OTHER_ATTACHMENTS';

@@ -5,6 +5,7 @@ import {CandidateAbilityService} from '../../service/candidate-ability.service';
 import {ToastrService} from 'ngx-toastr';
 import {CandidateAbility} from '../../model/CandidateAbility';
 import {BsModalRef, BsModalService, ModalOptions} from 'ngx-bootstrap';
+import {FLOAT_REGEX, INTEGER_REGEX} from "../../AppConstant";
 
 @Component({
   selector: 'app-ability',
@@ -12,6 +13,8 @@ import {BsModalRef, BsModalService, ModalOptions} from 'ngx-bootstrap';
   styleUrls: ['./ability.component.scss']
 })
 export class AbilityComponent implements OnInit {
+  _FLOAT_REGEX = FLOAT_REGEX;
+  _INTEGER_REGEX = INTEGER_REGEX;
   @ViewChild('f') f: NgForm;
   @Input() ability: any;
   @Input() currency: any;
