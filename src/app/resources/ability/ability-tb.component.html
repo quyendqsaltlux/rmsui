@@ -97,7 +97,7 @@
           <input class="form-control form-control-sm" id="rateWord"
                  name="rateWord" [pattern]="_FLOAT_REGEX"
                  [(ngModel)]="model.rate"
-                 required min="0" maxlength="15"
+                 required min="0" maxlength="10"
                  #rateWord="ngModel"
                  [ngClass]="{'is-invalid': f.submitted && rateWord.invalid}">
           <div *ngIf="rateWord.invalid && (rateWord.dirty || rateWord.touched)" class="msg-invalid">Type a number</div>
@@ -118,7 +118,7 @@
         <td>
           <input class="form-control form-control-sm" id="rateHour" name="rateHour"
                  [(ngModel)]="model.rate2"
-                 required min="0" maxlength="15" [pattern]="_FLOAT_REGEX"
+                 required min="0" maxlength="10" [pattern]="_FLOAT_REGEX"
                  #rateHour="ngModel"
                  [ngClass]="{'is-invalid': f.submitted && rateHour.invalid}">
           <div *ngIf="rateHour.invalid && (rateHour.dirty || rateHour.touched)" class="msg-invalid">Type a number</div>
@@ -137,11 +137,11 @@
         <td class="text-center">
           <label>{{currency}}</label>
         </td>
-        <!--MINIMUM VOLUM-->
+        <!--MINIMUM VOLUME-->
         <td>
           <input class="form-control form-control-sm" id="minimumVolum" name="minimumVolum"
                  [(ngModel)]="model.minimumVolum"
-                 maxlength="10" [pattern]="_INTEGER_REGEX"
+                 maxlength="8" [pattern]="_INTEGER_REGEX"
                  #minimumVolum="ngModel"
                  [ngClass]="{'is-invalid': f.submitted && minimumVolum.invalid}">
           <div *ngIf="minimumVolum.invalid && (minimumVolum.dirty || minimumVolum.touched)" class="msg-invalid">Type a integer</div>
@@ -150,7 +150,7 @@
         <td>
           <input class="form-control form-control-sm" id="minimumCharge" name="minimumCharge"
                  [(ngModel)]="model.minimumCharge"
-                 maxlength="10" [pattern]="_FLOAT_REGEX"
+                 maxlength="8" [pattern]="_FLOAT_REGEX"
                  #minimumCharge="ngModel"
                  [ngClass]="{'is-invalid': f.submitted && minimumCharge.invalid}">
           <div *ngIf="minimumCharge.invalid && (minimumCharge.dirty || minimumCharge.touched)" class="msg-invalid">Type a number</div>
