@@ -31,7 +31,11 @@ export class PrincipleService {
     const found = user.roles.findIndex((role) => role === 'ROLE_PM_LEADER');
     return found >= 0;
   }
-
+  public isRM() {
+    const user = JSON.parse(sessionStorage.getItem('userInfo'));
+    const found = user.roles.findIndex((role) => role === 'ROLE_RM');
+    return found >= 0;
+  }
   public isAdmin() {
     const user = JSON.parse(sessionStorage.getItem('userInfo'));
     const found = user.roles.findIndex((role) => role === 'ROLE_ADMIN');

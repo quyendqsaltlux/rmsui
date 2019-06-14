@@ -34,6 +34,7 @@ import {ResourceCodeCellComponent} from './ag-grid/resource-code-cell/resource-c
 import {ProgressCellComponent} from './ag-grid/progress-cell/progress-cell.component';
 import {ForbiddenValidatorDirective} from '../validation/forbidden-name.directive';
 import {PercentDirective} from '../validation/percent.directive';
+import {TrackingTestActionsCellComponent} from './ag-grid/tracking-test-actions-cell/tracking-test-actions-cell.component';
 
 @NgModule({
   declarations: [
@@ -65,7 +66,8 @@ import {PercentDirective} from '../validation/percent.directive';
     ResourceCodeCellComponent,
     ProgressCellComponent,
     ForbiddenValidatorDirective,
-    PercentDirective
+    PercentDirective,
+    TrackingTestActionsCellComponent
   ],
   imports: [
     CommonModule,
@@ -96,7 +98,8 @@ import {PercentDirective} from '../validation/percent.directive';
       InternalCheckCellComponent,
       ProjectUrgentCellComponent,
       ResourceCodeCellComponent,
-      ProgressCellComponent
+      ProgressCellComponent,
+      TrackingTestActionsCellComponent
     ])
   ],
   exports: [
@@ -141,7 +144,8 @@ import {PercentDirective} from '../validation/percent.directive';
     ResourceCodeCellComponent,
     ProgressCellComponent,
     ForbiddenValidatorDirective,
-    PercentDirective
+    PercentDirective,
+    TrackingTestActionsCellComponent
   ],
   entryComponents: [
     EmployeeSearchComponent

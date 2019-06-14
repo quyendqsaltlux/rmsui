@@ -7,6 +7,7 @@ import {Router} from '@angular/router';
 import {TestWaitingService} from '../../service/test-waiting.service';
 import {InternalCheckCellComponent} from '../../share/ag-grid/internal-check-cell/internal-check-cell.component';
 import {EQUAL} from '../../AppConstant';
+import {TrackingTestActionsCellComponent} from "../../share/ag-grid/tracking-test-actions-cell/tracking-test-actions-cell.component";
 
 @Component({
   selector: 'app-test-waiting-list',
@@ -116,13 +117,44 @@ export class TestWaitingListComponent implements OnInit {
     this.sortingOrder = ['desc', 'asc'];
     this.context = {componentParent: this};
     this.frameworkComponents = {
-      actionRender: ActionsColRendererComponent,
+      actionRender: TrackingTestActionsCellComponent,
       internalCheckRender: InternalCheckCellComponent
     };
   }
 
-  gotoEditForm(index) {
+  onEdit(index) {
     this.route.navigate(['/resources/test-waiting/edit/' + this.modelList[index].id]);
+  }
+
+  onDelete(index) {
+    this.openModal(this.template, this.modelList[index].id);
+  }
+
+  openModal(template: TemplateRef<any>, id) {
+    this.deleteId = id;
+    this.modalRef = this.modalService.show(template, {class: 'modal-sm'} as ModalOptions);
+  }
+
+  confirm(): void {
+    this.modalRef.hide();
+    if (this.deleteId < 0) {
+      return;
+    }
+    this.testWaitingService.deleteById(this.deleteId).subscribe((resp) => {
+        this.toastr.success('Delete successfully!');
+        this.onFilter();
+      },
+      (error1 => {
+        if (error1.status === 400) {
+          this.toastr.error('Can not delete project includes resources');
+          return;
+        }
+        this.toastr.error('Fail to delete!');
+      }));
+  }
+
+  decline(): void {
+    this.modalRef.hide();
   }
 
   /**
