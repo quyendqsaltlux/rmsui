@@ -215,9 +215,16 @@ export class ProjectAssignmentComponent implements OnInit {
 
   deletePo(poId) {
     this.poService.deleteById(poId).subscribe((resp) => {
-      this.toastr.success('Delete Po successfully!');
-      this.saveDone.emit(true);
-    }, (error2) => this.toastr.error('Fail to delete Po!'));
+        this.toastr.success('Delete Po successfully!');
+        this.saveDone.emit(true);
+      },
+      (error2) => {
+        if (error2.status === 400) {
+          this.toastr.error('Can not delete PO due to an Invoice existed!');
+          return;
+        }
+        this.toastr.error('Fail to delete Po!');
+      });
   }
 
   isComputeNetHourManually() {
