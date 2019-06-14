@@ -1,0 +1,40 @@
+.assignment-container {
+  .new-pro-assignment {
+    box-shadow: 0 0 0 0.2rem #4dbd7491;
+  }
+
+  textarea {
+    max-height: 150px;
+  }
+
+  .form-left .form-group {
+    padding-left: 1px;
+    padding-right: 1px;
+    margin-bottom: 0 !important;
+  }
+  .form-left .form-group.date {
+    width: 130px;
+  }
+  .card-body {
+    padding: 0.25rem;
+  }
+
+  .form-group label, a {
+    font-size: 85%;
+  }
+
+  .w80 {
+    width: 80px;
+  }
+
+  .right-actions {
+    width: 30px;
+  }
+
+  .resource-search {
+    min-width: 250px;
+  }
+}
+.msg-invalid{
+  font-size: 85%;
+}

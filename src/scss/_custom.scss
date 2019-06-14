@@ -1,0 +1,88 @@
+@import "custom-angular";
+@import "custom-theme";
+@import "custom-ng-select";
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.custom-search-input {
+  min-width: 200px;
+}
+
+.download-fake-link {
+  visibility: hidden;
+}
+
+table.candidates-table .ng-select.custom .ng-select-container {
+  min-height: 28px !important;
+  height: 28px;
+}
+.w50 {
+  width: 50px;
+}
+.mw50 {
+  min-width: 50px;
+}
+
+.mw350 {
+  min-width: 350px;
+}
+
+.mw250 {
+  min-width: 250px;
+}
+
+.mw150 {
+  min-width: 150px;
+}
+
+.mw110 {
+  min-width: 110px;
+}
+
+.mh350 {
+  min-height: 350px;
+}
+
+.font12 {
+  font-size: 12px;
+}
+
+.one-line {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+.w100 {
+  width: 100%;
+}
+
+.up-conner {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+
+.bottom-conner {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+}
+
+.ag-grid-custom {
+  width: 100%;
+  height: calc(100vh - 180px);
+}
+.ag-grid-custom.haft {
+  height: calc((100vh - 180px)/2);
+}
+
+.dropdown-item.sm {
+  padding: .5rem .75rem;
+}
+
+.card-main-header {
+  background-color: #63c2ded6;
+}

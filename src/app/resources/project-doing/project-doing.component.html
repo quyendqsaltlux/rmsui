@@ -1,0 +1,24 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">{{title}}</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <div class="w100">
+    <ag-grid-angular
+      #agGrid
+      id="myGrid"
+      class="ag-theme-balham ag-grid-custom haft"
+      [context]="context"
+      [frameworkComponents]="frameworkComponents"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      [columnTypes]="columnTypes"
+      [rowData]="modelList"
+      [animateRows]="true"
+      [floatingFilter]="false"
+      (gridReady)="onGridReady($event)"
+    ></ag-grid-angular>
+  </div>
+</div>
