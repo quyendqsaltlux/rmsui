@@ -224,29 +224,6 @@ export class TestWaitingListComponent implements OnInit {
     this.openModal(this.template, this.modelList[index].id);
   }
 
-  openModal(template: TemplateRef<any>, id) {
-    this.deleteId = id;
-    this.modalRef = this.modalService.show(template, {class: 'modal-sm'} as ModalOptions);
-  }
-
-  confirm(): void {
-    this.modalRef.hide();
-    if (this.deleteId < 0) {
-      return;
-    }
-    this.testWaitingService.deleteById(this.deleteId).subscribe((resp) => {
-        this.toastr.success('Delete successfully!');
-        this.onFilter();
-      },
-      (error1 => {
-        this.toastr.error('Fail to delete!');
-      }));
-  }
-
-  decline(): void {
-    this.modalRef.hide();
-  }
-
   onClickTab(tab) {
     if (tab !== this.activedTab) {
       this.activedTab = tab;
