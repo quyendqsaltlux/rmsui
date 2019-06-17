@@ -131,7 +131,7 @@
                 <ng-container *ngIf="model.assignment.externalResource">
                   <ng-select [(ngModel)]="model.currency" [searchable]="false" [clearable]="false"
                              [dropdownPosition]="'top'" class="po-currency"
-                             name="currency" id="currency"
+                             name="currency" id="currency" [disabled]="model.invoice && model.invoice.id > 0"
                              (change)="onChangeCurrency()"
                              #currency="ngModel" required
                              [ngClass]="{'is-invalid': f.submitted && currency.invalid}">

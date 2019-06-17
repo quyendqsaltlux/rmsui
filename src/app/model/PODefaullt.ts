@@ -8,4 +8,5 @@ export interface PODefault {
   createdAt: Date;
   updatedAt: Date;
   assignment: ProjectAssignmentReq;
+  invoice?: any;
 }
